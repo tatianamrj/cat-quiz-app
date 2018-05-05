@@ -64,7 +64,7 @@ function generateQuestion () {
     var buildQuestion= `<div id="question-${questionNumber}">
     <h2>${STORE[questionNumber-1].question}</h2>
     <form>
-    <fieldset><legend>Select an answer from the options below:</legend>`;
+    <fieldset><legend>${STORE[questionNumber-1].question}</legend>`;
     for (i=0; i<STORE[questionNumber-1].answers.length; i++) {
       buildQuestion+=`<label class="answerOption">
     <input type="radio" value="${STORE[questionNumber-1].answers[i]}" name="answer" required>
